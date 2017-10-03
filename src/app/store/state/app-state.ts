@@ -1,8 +1,13 @@
+import { StoreDataState, initialStoreDataState } from './store-data-state';
+import { SettingsState, initialSettingsState } from "./settings-state";
 
+  
 export interface AppState {
-	counter: number;
+  storeData: StoreDataState;
+  settings: SettingsState
 }
 
 export const initialAppState: AppState = {
-	counter: 11
-};
+  storeData: initialStoreDataState,
+  settings: initialSettingsState  
+}

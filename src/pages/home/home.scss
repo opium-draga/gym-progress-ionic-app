@@ -1,3 +1,81 @@
-page-home {
+$green: #4CAF50;
+$greener: #2E7D32;
 
+.toast-error .toast-wrapper {
+  background: #C62828;
 }
+
+.toast-success .toast-wrapper {
+  background: $greener;
+}
+
+.card-margin {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.day-phrase {
+  overflow: hidden;
+
+  ion-icon {
+    font-size: 2.4em;
+    color: $green;
+    float: left;
+  }
+
+  .phrase {
+    float: right;
+    width: 90%;
+
+    P {
+      margin-top: 0;
+
+      &:first-child {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      &:nth-child(2) {
+        text-align: right;
+        font-style: italic;
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
+.add-button-wrapper {
+  text-align: center;
+  .add-button {
+    background-color: $green;
+    margin: 10px auto 2px auto;
+  }
+  span {
+    font-size: 0.8em;
+  }
+}
+
+.ios, .md {
+  page-home {
+    ion-card-header {
+      font-weight: bold;
+    }
+  }
+}
+
+.home-banner {
+  text-align: center;
+  img {
+    width: 50%;
+    display: inline-block;
+  }
+}
+
+.statistic-table {
+  border: 1px solid #222;
+  height: 200px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background: #ccc;
+}
+

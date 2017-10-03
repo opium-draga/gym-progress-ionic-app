@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar primary>
+      <ion-title>Weekly progress</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngIf="weightStatistic.length">
+        <ion-card-content>
+            <canvas #lineCanvas></canvas>
+        </ion-card-content>
+    </ion-card>
+
+    <p *ngIf="!weightStatistic.length" style="font-size:16px" padding>
+        You have not any weight yet. Please, at first add your weight :)
+    </p>
+
+</ion-content>

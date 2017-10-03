@@ -1,4 +1,37 @@
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
+
+  <div class="day-phrase card-margin">
+    <!--Basic: auto-select the icon based on the platform -->
+    <ion-icon name="bulb"></ion-icon>
+
+    <div class="phrase">
+      <p>The two most important days in your life are the day you are born and the day you find out why</p>
+      <p>–Mark Twain</p>
+    </div>
+  </div>
+
+  <div class="add-button-wrapper">
+    <button (click)="addWeightModal()" class="add-button" ion-fab>
+      <ion-icon name="add"></ion-icon>
+    </button>
+    <span>Add weight</span>
+  </div>
+
+
+
+  <div class="statistic-table">
+
+  </div>
+
+  <div>
+    <p *ngIf="trackedWeeks" class="card-margin">
+      Tracked weeks:
+      <ion-badge item-end>{{trackedWeeks}}</ion-badge> </p>
+    <p *ngIf="!trackedWeeks">Sorry, you have not tracked weeks</p>
+  </div>
+
+  <div class="home-banner">
+    <img src="images/home-banner.png">
+  </div>
 </ion-content>

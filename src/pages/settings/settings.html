@@ -1,0 +1,36 @@
+
+
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <p>
+                Select your first week day. For example, i start my training week from Tuesday, so in Tuesday i should
+                do track of weight. 
+            </p>
+            <br>
+            <ion-item>
+                <ion-label>Selected day: </ion-label>
+                <ion-select [(ngModel)]="selectedDayOfWeek" (ngModelChange)="settingsWasChanged()">
+                    <ion-option *ngFor="let day of daysOfWeek" [value]="day.index">
+                        {{day.name}}
+                    </ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-content>
+            <p>
+                Receive notifications every first selected above day of week?
+            </p>
+            <br>
+            <ion-item>
+                <ion-label>Enable notifications</ion-label>
+                <ion-checkbox [(ngModel)]="enableNotifications" (ngModelChange)="settingsWasChanged()"
+                    color="primary" checked="true">
+                </ion-checkbox>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
